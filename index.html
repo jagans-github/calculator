@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <title>Calculator using js</title>
+</head>
+
+<body>
+    <div class="landing-page">
+        <div class="calculator">
+            <div class="form">
+                <div class="row mt-2 mb-2">
+                    <div class="col mb-2">
+                        <input type="text" dir="rtl" class="display-input" id="display" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="bg-info" onclick="display.value = ''">AC</button>
+                        <button class="bt" value="" onclick="display.value += '7'">
+                            7
+                        </button>
+                        <button class="bt" onclick="display.value += '4'">4</button>
+                        <button class="bt" onclick="display.value += '1'">1</button>
+                        <button class="bt" onclick="display.value += '00'">00</button>
+                    </div>
+                    <div class="col">
+                        <button class="bg-danger" onclick="display.value = display.value.toString().slice(0,-1)">
+                            DEL
+                        </button>
+                        <button class="bt" onclick="display.value += '8'">8</button>
+                        <button class="bt" onclick="display.value += '5'">5</button>
+                        <button class="bt" onclick="display.value += '2'">2</button>
+                        <button class="bt" onclick="display.value += '0'">0</button>
+                    </div>
+                    <div class="col">
+                        <button class="bg-primary" onclick="display.value = '0'">
+                            ON
+                        </button>
+                        <button class="bt" onclick="display.value += '9'">9</button>
+                        <button class="bt" onclick="display.value += '6'">6</button>
+                        <button class="bt" onclick="display.value += '3'">3</button>
+                        <button class="bt" onclick="display.value += '.'">.</button>
+                    </div>
+                    <div class="col">
+                        <button class="bt-color" onclick="display.value += '/'">/</button>
+                        <button class="bt-color" onclick="display.value += '*'">*</button>
+                        <button class="bt-color" onclick="display.value += '+'">+</button>
+                        <button class="bt-color" onclick="display.value += '-'">-</button>
+                        <button class="bg-success" onclick="display.value = eval(display.value)">
+                            =
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Assets/js/jquery.min.js"></script>
+    <script src="Assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
